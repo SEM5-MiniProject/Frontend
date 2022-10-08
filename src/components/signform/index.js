@@ -1,9 +1,11 @@
 import { Fullscreen } from "@mui/icons-material";
 import { Button, Dialog, DialogTitle, Slide, TextField } from "@mui/material";
 import DialogContent from "@mui/material/node/DialogContent/DialogContent";
-import { useUIContext } from "../../context/ui";
-import { Box, styled } from "@mui/system";
 
+import { Box, styled } from "@mui/system";
+import { useUIContext } from "../../context/ui";
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
+import LoginForm from "../login";
 import { 
     Divider
   } from "@mui/material" 
@@ -28,24 +30,33 @@ const SignformContainer = styled(Box)(({ theme }) => ({
     justifyContent: "center",
     alignItems: "center",
     zIndex: 99999,
-    opacity: 0.9,
+    opacity: 1,
   }));
   
   export default function SignForm() {
     const { showSignForm, setSignForm } = useUIContext();
-    const MiddleDivider = styled((props) => (
-        <Divider variant="middle" {...props} />
-      ))``;
-  
+    const { setLoginForm } = useUIContext();
+   
   return (
     <Slide direction="down" in={showSignForm} timeout={500}>
         <SignformContainer>
-           <TextField required label = "Name" color = "secondary" placeholder= "Name" sx={{position: "absolute", bottom: 420, right:520}}></TextField>
+
+           <TextField required label = "Name" color = "secondary" placeholder= "Name" sx={{position: "absolute", bottom: 420, right:850, backgroundColor : 'orchid'}}></TextField>    
+            <TextField required label = "Email" placeholder= "Email" sx={{position: "absolute", bottom: 300, right:850, backgroundColor : 'orchid'}}></TextField>
+            <TextField placeholder = "password" id="Password" variant="outlined" required label="Password" sx={{position: "absolute", bottom: 360, right:850, backgroundColor : 'orchid'}} />
             
-            <TextField required label = "Email" placeholder= "Email" sx={{position: "absolute", bottom: 300, right:520}}></TextField>
-            <TextField placeholder = "password" id="Password" variant="outlined" required label="Password" sx={{position: "absolute", bottom: 360, right:520}} />
+            <TextField required label = "Phone No." color = "secondary" placeholder= "Phone No." sx={{position: "absolute", bottom: 420, right:520, backgroundColor : 'orchid'}}></TextField>
+            <TextField required label = "House No." placeholder= "House No." sx={{position: "absolute", bottom: 300, right:520, backgroundColor : 'orchid'}}></TextField>
+            <TextField placeholder = "Sector" id="Sector" variant="outlined" required label="Sector" sx={{position: "absolute", bottom: 360, right:520, backgroundColor : 'orchid'}} />
+            
+            <TextField required label = "City" color = "secondary" placeholder= "City" sx={{position: "absolute", bottom: 420, right:190, backgroundColor : 'orchid'}}></TextField>
+            <TextField required label = "State" placeholder= "State" sx={{position: "absolute", bottom: 300, right:190, backgroundColor : 'orchid'}}></TextField>
+            <TextField placeholder = "Pincode" id="Pincode" variant="outlined" required label="Pincode" sx={{position: "absolute", bottom: 360, right:190, backgroundColor : 'orchid'}} />
+            <div><input type = "checkbox"/>I agree with the </div>
             <BannerShopButton color = "primary" sx={{position: "absolute", bottom: 190, right:525}} style={{fontSize:"10px"}}>Sign up</BannerShopButton>
-            <BannerShopButton color = "primary" sx={{position: "absolute", bottom: 190, right:670}} style={{fontSize:"10px"}}>Login</BannerShopButton>
+            <BannerShopButton  
+            onClick={() => setLoginForm(true) } 
+            color = "primary" sx={{position: "absolute", bottom: 190, right:670, backgroundColor: 'lawngreen'}} style={{fontSize:"10px", color: 'black'}} >Login</BannerShopButton>
             
             <IconButton
                   onClick={() => setSignForm(false) }
