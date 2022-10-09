@@ -13,6 +13,7 @@ import Promotions from "./components/promotions";
 import SearchBox from "./components/search";
 import SignForm from "./components/signform";
 import { useEffect } from "react";
+import LoginForm from "./components/login";
 
 function App() {
   useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
             <Promotions />
             <SearchBox />
             <SignForm />
+            <LoginForm/>
             <Box display="flex" justifyContent="center" sx={{ p: 4 }}>
               <Typography variant="h4">Trending Food Items</Typography>
             </Box>

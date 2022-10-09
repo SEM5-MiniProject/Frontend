@@ -52,7 +52,7 @@ const SignformContainer = styled(Box)(({ theme }) => ({
             <TextField required label = "City" color = "secondary" placeholder= "City" sx={{position: "absolute", bottom: 420, right:190, backgroundColor : 'orchid'}}></TextField>
             <TextField required label = "State" placeholder= "State" sx={{position: "absolute", bottom: 300, right:190, backgroundColor : 'orchid'}}></TextField>
             <TextField placeholder = "Pincode" id="Pincode" variant="outlined" required label="Pincode" sx={{position: "absolute", bottom: 360, right:190, backgroundColor : 'orchid'}} />
-            <div><input type = "checkbox"/>I agree with the </div>
+           
             <BannerShopButton color = "primary" sx={{position: "absolute", bottom: 190, right:525}} style={{fontSize:"10px"}}>Sign up</BannerShopButton>
             <BannerShopButton  
             onClick={() => setLoginForm(true) } 
