@@ -14,6 +14,8 @@ import SearchBox from "./components/search";
 import SignForm from "./components/signform";
 import { useEffect } from "react";
 import LoginForm from "./components/login";
+import { PromotionsContainer } from "./styles/promotions";
+import Exploree from "./components/Explore";
 
 function App() {
   useEffect(() => {
@@ -40,6 +42,9 @@ function App() {
               <Typography variant="h4">Trending Food Items</Typography>
             </Box>
             <Products />
+            <PromotionsContainer/>
+            <br/>
+            <Exploree/>
             <Footer />
             <AppDrawer />
           </UIProvider>
