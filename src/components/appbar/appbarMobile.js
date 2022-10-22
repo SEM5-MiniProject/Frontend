@@ -4,9 +4,10 @@ import SearchIcon from "@mui/icons-material/Search";
 import Actions from "./actions";
 import { IconButton } from "@mui/material";
 import { useUIContext } from "../../context/ui";
+import { Add, AddAPhoto } from "@material-ui/icons";
 
 export default function AppbarMobile({ matches }) {
-  const { setDrawerOpen, setShowSearchBox } = useUIContext();
+  const { setFirst, setDrawerOpen, setShowSearchBox } = useUIContext();
   return (
     <AppbarContainer>
       <IconButton onClick={() => setDrawerOpen(true)}>
@@ -15,6 +16,7 @@ export default function AppbarMobile({ matches }) {
       <AppbarHeader textAlign={"center"} variant="h4">
         Meal Diaries
       </AppbarHeader>
+      <IconButton><Add onClick = {()=>setFirst(true)}/></IconButton>
       <IconButton onClick={() => setShowSearchBox(true)}>
         <SearchIcon />
       </IconButton>

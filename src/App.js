@@ -17,11 +17,14 @@ import LoginForm from "./components/login";
 import { PromotionsContainer } from "./styles/promotions";
 import Exploree from "./components/Explore";
 
+
 function App() {
   useEffect(() => {
     document.title = "React Material UI - Home";
   }, []);
+
   return (
+    
     <ThemeProvider theme={theme}>
       <Container
         disableGutters
@@ -32,7 +35,10 @@ function App() {
       >
         <Stack>
           <UIProvider>
-            <Appbar />
+          
+            <Appbar/>
+            {/* <AddProFirst/> */}
+            {/*  */}
             <Banner />
             <Promotions />
             <SearchBox />
@@ -43,6 +49,7 @@ function App() {
             </Box>
             <Products />
             <PromotionsContainer/>
+           
             <br/>
             <Exploree/>
             <Footer />

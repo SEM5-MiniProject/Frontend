@@ -8,6 +8,7 @@ export const UIProvider = ({ children }) => {
     const [showSearchBox, setShowSearchBox] = useState(false);
     const [showSignForm, setSignForm] = useState(false);
     const [showLoginForm, setLoginForm] = useState(false);
+    const [showFirst, setFirst] = useState(false);
 
     const value = {
         drawerOpen,
@@ -17,7 +18,9 @@ export const UIProvider = ({ children }) => {
         showSignForm,
         setSignForm,
         showLoginForm,
-        setLoginForm
+        setLoginForm,
+        showFirst,
+        setFirst
     };
 
     return <UIContext.Provider value={value}>{children}</UIContext.Provider>

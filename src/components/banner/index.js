@@ -34,5 +34,6 @@ export default function Banner() {
       </BannerContent>
     </BannerContainer>
     
+    
   );
 }

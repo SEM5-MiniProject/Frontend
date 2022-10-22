@@ -40,7 +40,7 @@ const SignformContainer = styled(Box)(({ theme }) => ({
   return (
     <Slide direction="down" in={showSignForm} timeout={500}>
         <SignformContainer>
-
+        <center>
            <TextField required label = "Name" color = "secondary" placeholder= "Name" sx={{position: "absolute", bottom: 420, right:850, backgroundColor : 'orchid'}}></TextField>    
             <TextField required label = "Email" placeholder= "Email" sx={{position: "absolute", bottom: 300, right:850, backgroundColor : 'orchid'}}></TextField>
             <TextField placeholder = "password" id="Password" variant="outlined" required label="Password" sx={{position: "absolute", bottom: 360, right:850, backgroundColor : 'orchid'}} />
@@ -55,7 +55,7 @@ const SignformContainer = styled(Box)(({ theme }) => ({
            
             <BannerShopButton color = "primary" sx={{position: "absolute", bottom: 190, right:525}} style={{fontSize:"10px"}}>Sign up</BannerShopButton>
             <BannerShopButton  
-            onClick={() => setLoginForm(true) } 
+            onClick={() => setLoginForm(true) & setSignForm(false) } 
             color = "primary" sx={{position: "absolute", bottom: 190, right:670, backgroundColor: 'lawngreen'}} style={{fontSize:"10px", color: 'black'}} >Login</BannerShopButton>
             
             <IconButton
@@ -68,6 +68,7 @@ const SignformContainer = styled(Box)(({ theme }) => ({
         >
           <CloseIcon sx={{ fontSize: "4rem" }} color="primary" />
         </IconButton>
+        </center>
         </SignformContainer>
        
         
