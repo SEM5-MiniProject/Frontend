@@ -15,12 +15,13 @@ import SignForm from "./components/signform";
 import { useEffect } from "react";
 import LoginForm from "./components/login";
 import { PromotionsContainer } from "./styles/promotions";
-import Exploree from "./components/Explore";
-
+import Exploree from "./components/Explore/index";
+import AddProFirst from "./components/AddProduct/first";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   useEffect(() => {
-    document.title = "React Material UI - Home";
+    document.title = "Meal Diaries";
   }, []);
 
   return (
@@ -57,7 +58,18 @@ function App() {
           </UIProvider>
         </Stack>
       </Container>
-    </ThemeProvider>
+
+      <Router>
+        <Routes>
+          {/* <Route path="/home" component={} /> */}
+          <Route path="/explore" component={Exploree} />
+          {/* <Route path="/offers" component={} />
+          <Route path="/aboutus" component={} />
+          <Route path="/contactus" component={} /> */}
+        </Routes>
+      </Router>
+    
+    </ThemeProvider>    
   );
 }
 

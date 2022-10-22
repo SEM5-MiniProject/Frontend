@@ -22,6 +22,10 @@ import Actions from "./actions";
 import { useUIContext } from "../../context/ui";
 import { BannerShopButton } from "../../styles/banner";
 import AddProFirst from "../AddProduct/first";
+import { margin } from "polished";
+// import { Link } from "react-router-dom";
+import { Link } from "@mui/material";
+import { Button } from "@mui/material";
 
 export default function AppbarDesktop({ matches }) {
   const { setFirst } = useUIContext();
@@ -30,12 +34,29 @@ export default function AppbarDesktop({ matches }) {
   return (<>
     <AppbarContainer>
       <AppbarHeader variant="h4">Meal Diaries</AppbarHeader>
+      {/* <nav className="navbar" > */}
       <MyList type="row">
-        <ListItemText primary="Home" />
-        <ListItemText primary="Explore" />
-        <ListItemText primary="Offers" />
-        <ListItemText primary="About us" />
-        <ListItemText primary="Contact us" />
+        <ListItemButton>
+        {/* <Link to="/explore"><ListItemText primary="Home" /></Link> */}
+          <Button href="/explore"><ListItemText primary="Home" /></Button>
+        </ListItemButton>
+        <ListItemButton>
+          {/* <Link to="/explore"><ListItemText primary="Explore" /></Link> */}
+          <Button href="/explore"><ListItemText primary="Explore" /></Button>
+        </ListItemButton>
+        <ListItemButton>
+        {/* <Link to="/explore"><ListItemText primary="Offers" /></Link> */}
+          <Button href="/explore"><ListItemText primary="Offers" /></Button>
+        </ListItemButton>
+        <ListItemButton>
+        {/* <Link to="/explore"><ListItemText primary="About Us" /></Link> */}
+          <Button href="/explore"><ListItemText primary="About Us" /></Button>
+        </ListItemButton>
+        <ListItemButton>
+          {/* <Link to="/explore"><ListItemText primary="Contact Us" /></Link> */}
+          <Button href="/explore"><ListItemText primary="Contact Us" /></Button>
+        </ListItemButton>
+      
         <BannerShopButton onClick = {() => setFirst(true)} style={{fontSize:"12px", color: 'black', padding:'10px'}} color = "secondary"><center>Add Product</center></BannerShopButton>
         
         <ListItemButton onClick={() => setShowSearchBox(true)}>
@@ -44,7 +65,8 @@ export default function AppbarDesktop({ matches }) {
             <SearchIcon />
           </ListItemIcon>
         </ListItemButton>
-          </MyList>
+      </MyList>
+      {/* </nav> */}
        <Actions matches={matches} />   
     </AppbarContainer>
 
