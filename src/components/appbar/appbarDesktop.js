@@ -45,7 +45,7 @@ export default function AppbarDesktop({ matches }) {
           <Link className="nav-item" to="#"><ListItemText primaryTypographyProps={{fontSize: '18px'}} primary="Contact Us" /></Link>
           {/* <Button href="#"><ListItemText primary="Contact Us" /></Button> */}
         </ListItemButton>
-      <Link className="nav-item" to="/addproduct">
+      <Link className="nav-item addbutton" to="/addproduct">
         <BannerShopButton onClick = {() => setFirst(true)} style={{fontSize:"12px", color: 'black', padding:'10px'}} color = "secondary"><center>Add Product</center></BannerShopButton>
       </Link>
         
