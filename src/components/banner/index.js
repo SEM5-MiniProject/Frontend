@@ -20,13 +20,13 @@ export default function Banner() {
     <BannerContainer >
       <BannerImage src="/images/banner/foodiee.png" />
       <BannerContent>
-        <Typography variant="h6">Huge variety in foods is here</Typography>
+        <Typography variant="h5">Huge variety of foods available at a tap of your finger</Typography>
         <BannerTitle variant="h2">
           Meal Diaries
         </BannerTitle>
 
         <BannerDescription variant="subtitle">
-          We here at Meal Diaries provide the best quality of foods at efficient cost and time.
+          We at Meal Diaries are committed to provide the best quality of food at a pocket-friendly cost and reduced time.
           We want our consumers to eat and live a healthier life.
         </BannerDescription>
 

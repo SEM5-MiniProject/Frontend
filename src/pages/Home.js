@@ -39,10 +39,10 @@ const Home = () => {
             <Typography variant="h4">Trending Food Items</Typography>
           </Box>
           <Products />
-          <PromotionsContainer />
+          {/* <PromotionsContainer /> */}
 
-          <br />
-          <Exploree />
+          {/* <br /> */}
+          {/* <Exploree /> */}
           {/* <Form/> */}
           <Footer />
           <AppDrawer />
