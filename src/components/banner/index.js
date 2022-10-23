@@ -21,13 +21,11 @@ export default function Banner() {
       <BannerImage src="/images/banner/foodiee.png" />
       <BannerContent>
         <Typography variant="h5">Huge variety of foods available at a tap of your finger</Typography>
-        <BannerTitle variant="h2">
-          Meal Diaries
-        </BannerTitle>
+        <BannerTitle variant="body1">Meal Diaries</BannerTitle>
 
-        <BannerDescription variant="subtitle">
+        <BannerDescription variant="subtitle1">
           We at Meal Diaries are committed to provide the best quality of food at a pocket-friendly cost and reduced time.
-          We want our consumers to eat and live a healthier life.
+          We want our consumers to eat and live a healthy life.
         </BannerDescription>
 
         <BannerShopButton color="primary" onClick={() => setSignForm(true)}>Sign up</BannerShopButton>
