@@ -9,7 +9,7 @@ import Form from "./components/addProductform/Form";
 
 function App() {
   useEffect(() => {
-    document.title = "Meal Diaries";
+    document.title = "Meal Diaries - Food Delivery Simplified";
   }, []);
 
   return (
