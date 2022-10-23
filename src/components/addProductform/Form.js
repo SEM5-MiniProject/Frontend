@@ -6,6 +6,7 @@ import Select from 'react-select';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AddAPhoto } from "@material-ui/icons";
 import Button from '@material-ui/core/Button';
+import Appbar from '../appbar';
 export const Colors = {
   primary: "#5f2c3e",
   secondary: "#d1adcc",
@@ -59,6 +60,7 @@ const list = [
 ];
 export default function Form(){
   return (<>
+  <Appbar/>
   <h1 style = { {color: Colors.primary, fontFamily:  "cursive"}} > Provide the details</h1>
       
       <center><BackG ><TextField required label = "Name" placeholder= "Enter Name of Product" sx={{position: "absolute", bottom: 400, right:500, backgroundColor : 'orchid'}}></TextField>
