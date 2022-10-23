@@ -37,24 +37,24 @@ export default function AppbarDesktop({ matches }) {
       {/* <nav className="navbar" > */}
       <MyList type="row">
         <ListItemButton>
-        {/* <Link to="/explore"><ListItemText primary="Home" /></Link> */}
-          <Button href="/explore"><ListItemText primary="Home" /></Button>
+        {/* <Link to="#"><ListItemText primary="Home" /></Link> */}
+          <Button href="#"><ListItemText primary="Home" /></Button>
         </ListItemButton>
         <ListItemButton>
-          {/* <Link to="/explore"><ListItemText primary="Explore" /></Link> */}
-          <Button href="/explore"><ListItemText primary="Explore" /></Button>
+          {/* <Link to="/Explore"><ListItemText primary="Explore" /></Link> */}
+          <Button href="/Explore"><ListItemText primary="Explore" /></Button>
         </ListItemButton>
         <ListItemButton>
-        {/* <Link to="/explore"><ListItemText primary="Offers" /></Link> */}
-          <Button href="/explore"><ListItemText primary="Offers" /></Button>
+        {/* <Link to="#"><ListItemText primary="Offers" /></Link> */}
+          <Button href="#"><ListItemText primary="Offers" /></Button>
         </ListItemButton>
         <ListItemButton>
-        {/* <Link to="/explore"><ListItemText primary="About Us" /></Link> */}
-          <Button href="/explore"><ListItemText primary="About Us" /></Button>
+        {/* <Link to="#"><ListItemText primary="About Us" /></Link> */}
+          <Button href="#"><ListItemText primary="About Us" /></Button>
         </ListItemButton>
         <ListItemButton>
-          {/* <Link to="/explore"><ListItemText primary="Contact Us" /></Link> */}
-          <Button href="/explore"><ListItemText primary="Contact Us" /></Button>
+          {/* <Link to="#"><ListItemText primary="Contact Us" /></Link> */}
+          <Button href="#"><ListItemText primary="Contact Us" /></Button>
         </ListItemButton>
       
         <BannerShopButton onClick = {() => setFirst(true)} style={{fontSize:"12px", color: 'black', padding:'10px'}} color = "secondary"><center>Add Product</center></BannerShopButton>

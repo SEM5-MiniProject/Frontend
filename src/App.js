@@ -61,11 +61,11 @@ function App() {
 
       <Router>
         <Routes>
-          {/* <Route path="/home" component={} /> */}
-          <Route path="/explore" component={Exploree} />
-          {/* <Route path="/offers" component={} />
-          <Route path="/aboutus" component={} />
-          <Route path="/contactus" component={} /> */}
+          {/* <Route path="/home" element={} /> */}
+          <Route path="/Explore" element={<Exploree/>} />
+          {/* <Route path="/offers" element={} />
+          <Route path="/aboutus" element={} />
+          <Route path="/contactus" element={} /> */}
         </Routes>
       </Router>
     
