@@ -39,3 +39,16 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.nav-item :hover{
+  color: purple;
+}
+
+.navbar{
+  margin-right: 150px;
+}
+
+.nav-item{
+  text-decoration: none;
+  color: black;
+}

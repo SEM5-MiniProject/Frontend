@@ -19,33 +19,33 @@ import { Link } from "react-router-dom";
 export default function AppbarDesktop({ matches }) {
   const { setFirst } = useUIContext();
   const { setShowSearchBox } = useUIContext();
-
+ 
   return (<>
     <AppbarContainer>
       <AppbarHeader variant="h4">Meal Diaries</AppbarHeader>
-      {/* <nav className="navbar" > */}
+      <nav className="navbar" >
       <MyList type="row">
         <ListItemButton>
-        <Link to="/"><ListItemText primary="Home" /></Link>
-          {/* <Button href="#"><ListItemText primary="Home" /></Button> */}
+          <Link className="nav-item" to="/"><ListItemText primaryTypographyProps={{fontSize: '18px'}} primary="Home" /></Link>
+          {/* <Button className="nav-item" href="/"><ListItemText primary="Home" /></Button> */}
         </ListItemButton>
         <ListItemButton>
-          <Link to="/Explore"><ListItemText primary="Explore" /></Link>
+          <Link className="nav-item" to="/Explore"><ListItemText primaryTypographyProps={{fontSize: '18px'}} primary="Explore" /></Link>
           {/* <Button href="/Explore"><ListItemText primary="Explore" /></Button> */}
         </ListItemButton>
         <ListItemButton>
-        <Link to="#"><ListItemText primary="Offers" /></Link>
+        <Link className="nav-item" to="#"><ListItemText primaryTypographyProps={{fontSize: '18px'}} primary="Offers" /></Link>
           {/* <Button href="#"><ListItemText primary="Offers" /></Button> */}
         </ListItemButton>
         <ListItemButton>
-        <Link to="#"><ListItemText primary="About Us" /></Link>
+        <Link className="nav-item" to="#"><ListItemText primaryTypographyProps={{fontSize: '18px'}} primary="About Us" /></Link>
           {/* <Button href="#"><ListItemText primary="About Us" /></Button> */}
         </ListItemButton>
         <ListItemButton>
-          <Link to="#"><ListItemText primary="Contact Us" /></Link>
+          <Link className="nav-item" to="#"><ListItemText primaryTypographyProps={{fontSize: '18px'}} primary="Contact Us" /></Link>
           {/* <Button href="#"><ListItemText primary="Contact Us" /></Button> */}
         </ListItemButton>
-      <Link to="/addproduct">
+      <Link className="nav-item" to="/addproduct">
         <BannerShopButton onClick = {() => setFirst(true)} style={{fontSize:"12px", color: 'black', padding:'10px'}} color = "secondary"><center>Add Product</center></BannerShopButton>
       </Link>
         
@@ -56,7 +56,7 @@ export default function AppbarDesktop({ matches }) {
           </ListItemIcon>
         </ListItemButton>
       </MyList>
-      {/* </nav> */}
+      </nav>
        <Actions matches={matches} />   
     </AppbarContainer>
 
