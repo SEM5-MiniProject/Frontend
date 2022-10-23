@@ -18,6 +18,7 @@ import { PromotionsContainer } from "./styles/promotions";
 import Exploree from "./components/Explore/index";
 import AddProFirst from "./components/AddProduct/first";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Form from "./components/addProductform/Form";
 
 function App() {
   useEffect(() => {
@@ -53,6 +54,7 @@ function App() {
            
             <br/>
             <Exploree/>
+            {/* <Form/> */}
             <Footer />
             <AppDrawer />
           </UIProvider>
