@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { AddAPhoto } from "@material-ui/icons";
 import Button from '@material-ui/core/Button';
 import Appbar from '../appbar';
+import { useUIContext } from '../../context/ui';
 export const Colors = {
   primary: "#5f2c3e",
   secondary: "#d1adcc",
@@ -59,11 +60,14 @@ const list = [
   
 ];
 export default function Form(){
+  const { showSellerAdd ,setSellerAdd } = useUIContext();
   return (<>
   <Appbar/>
-  <h1 style = { {color: Colors.primary, fontFamily:  "cursive"}} > Provide the details</h1>
+  
       
-      <center><BackG ><TextField required label = "Name" placeholder= "Enter Name of Product" sx={{position: "absolute", bottom: 400, right:500, backgroundColor : 'orchid'}}></TextField>
+      <center><BackG in={showSellerAdd}>
+      <h5 style = { {color: Colors.primary, fontFamily:  "cursive", position : "absolute", bottom: 470 }} > Provide the details</h5>
+        <TextField required label = "Name" placeholder= "Enter Name of Product" sx={{position: "absolute", bottom: 400, right:500, backgroundColor : 'orchid'}}></TextField>
       <TextField required label = "Price" placeholder= "Enter the Price" sx={{position: "absolute", bottom: 400, right:190, backgroundColor : 'orchid'}}></TextField>
       <TextField required label = "Description" placeholder= "Enter the Desription" sx={{position: "absolute", bottom: 311, right:500, backgroundColor : 'orchid'}}></TextField>
       <TextField required label = "Belongs To" placeholder= "Enter Belongs to" sx={{position: "absolute", bottom: 311, right:190, backgroundColor : 'orchid'}}></TextField>
@@ -90,7 +94,8 @@ export default function Form(){
   
   <input style = {{ position : "absolute" ,top: 364, right: 300}} type="radio" value="isavail" name="isavailable" /> 
   <label style = {{ position : "absolute" ,top: 357, right: 315}}><b>  IsAvailable </b></label>
-<Button style = {{ color: 'white', backgroundColor : '#590059', position : "absolute" ,top: 427, right: 390}}>Proceed...</Button>
+<Button style = {{ color: 'white', backgroundColor : '#590059', position : "absolute" ,top: 427, right: 390}} onClick = {() => setSellerAdd(true)} >Proceed...</Button>
+{/* onClick event is not responding here */}
       </BackG></center>
       </>
    

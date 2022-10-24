@@ -6,6 +6,7 @@ import Exploree from "./components/Explore/index";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Form from "./components/addProductform/Form";
+import SellerAdd from "./components/addProductform/SellerAdd";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,8 @@ function App() {
           } />
           <Route path="/Explore" element={<Exploree/>} />
           <Route path="/addproduct" element={<Form/>} />
+          <Route path="/SellerAdd" element={<SellerAdd/>} />
+          
           {/* <Route path="/offers" element={} />
           <Route path="/aboutus" element={} />
           <Route path="/contactus" element={} /> */}
