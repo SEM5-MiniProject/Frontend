@@ -8,6 +8,7 @@ import { AddAPhoto } from "@material-ui/icons";
 import Button from '@material-ui/core/Button';
 import Appbar from '../appbar';
 import { useUIContext } from '../../context/ui';
+import { Link } from 'react-router-dom';
 export const Colors = {
   primary: "#5f2c3e",
   secondary: "#d1adcc",
@@ -94,9 +95,14 @@ export default function Form(){
   
   <input style = {{ position : "absolute" ,top: 364, right: 300}} type="radio" value="isavail" name="isavailable" /> 
   <label style = {{ position : "absolute" ,top: 357, right: 315}}><b>  IsAvailable </b></label>
-<Button style = {{ color: 'white', backgroundColor : '#590059', position : "absolute" ,top: 427, right: 390}} 
-onClick = {() => window.open("http://localhost:3000/SellerAdd")} >Proceed...</Button>
-{/* If possible any other method for opening SellerAdd  */}
+{/* <Button style = {{ color: 'white', backgroundColor : '#590059', position : "absolute" ,top: 427, right: 390}} 
+onClick = {() => window.open("http://localhost:3000/SellerAdd")} >Proceed...</Button> */}
+
+<Link className="nav-item addbutton" to="/SellerAdd">
+        <Button onClick = {() => setSellerAdd(true)} style = {{ color: 'white', backgroundColor : '#590059', position : "absolute" ,top: 427, right: 390}}  ><center>Proceed...</center></Button>
+      </Link>
+        
+
       </BackG></center>
       </>
    
