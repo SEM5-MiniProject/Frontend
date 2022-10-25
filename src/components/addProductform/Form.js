@@ -94,8 +94,9 @@ export default function Form(){
   
   <input style = {{ position : "absolute" ,top: 364, right: 300}} type="radio" value="isavail" name="isavailable" /> 
   <label style = {{ position : "absolute" ,top: 357, right: 315}}><b>  IsAvailable </b></label>
-<Button style = {{ color: 'white', backgroundColor : '#590059', position : "absolute" ,top: 427, right: 390}} onClick = {() => setSellerAdd(true)} >Proceed...</Button>
-{/* onClick event is not responding here */}
+<Button style = {{ color: 'white', backgroundColor : '#590059', position : "absolute" ,top: 427, right: 390}} 
+onClick = {() => window.open("http://localhost:3000/SellerAdd")} >Proceed...</Button>
+{/* If possible any other method for opening SellerAdd  */}
       </BackG></center>
       </>
    
