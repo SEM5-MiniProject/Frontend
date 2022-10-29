@@ -24,7 +24,7 @@ function App() {
           } />
           <Route path="/Explore" element={<Exploree/>} />
           <Route path="/addproduct" element={<Form/>} />
-          <Route path="/SellerAdd" element={<SellerAdd/>} />
+          <Route path="/selleradd" element={<SellerAdd/>} />
           
           {/* <Route path="/offers" element={} />
           <Route path="/aboutus" element={} />

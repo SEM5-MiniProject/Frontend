@@ -1,7 +1,7 @@
 import { Box, styled } from '@mui/system';
 
 import { TextField } from '@mui/material';
-import  React from 'react';
+import React from 'react';
 import Select from 'react-select';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AddAPhoto } from "@material-ui/icons";
@@ -23,7 +23,7 @@ export const Colors = {
   inverse: "#2F3D4A",
   shaft: "#333",
   orchid: "#da70d6",
-  lawngreen : "#7cfc00",
+  lawngreen: "#7cfc00",
   ///////////////
   // Grays
   ///////////////
@@ -40,7 +40,7 @@ export const Colors = {
 
 const BackG = styled(Box)(({ theme }) => ({
   position: "absolute",
-  
+
   top: 100,
   left: 230,
   width: "70%",
@@ -58,53 +58,53 @@ const list = [
   { label: "Dinner", value: 2 },
   { label: "Breakfast", value: 3 },
   { label: "Snacks", value: 4 },
-  
+
 ];
-export default function Form(){
-  const { showSellerAdd ,setSellerAdd } = useUIContext();
+export default function Form() {
+  const { showSellerAdd, setSellerAdd } = useUIContext();
   return (<>
-  <Appbar/>
-  
-      
-      <center><BackG in={showSellerAdd}>
-      <h5 style = { {color: Colors.primary, fontFamily:  "cursive", position : "absolute", bottom: 470 }} > Provide the details</h5>
-      <TextField required label = "Name" placeholder= "Enter Name of Product" sx={{position: "absolute", bottom: 400, right:550, backgroundColor : 'orchid'}}></TextField>
-      <TextField required label = "Price" placeholder= "Enter the Price" sx={{position: "absolute", bottom: 400, right:300, backgroundColor : 'orchid'}}></TextField>
-      <TextField required label = "Description" placeholder= "Enter the Desription" sx={{position: "absolute", bottom: 311, right:550, backgroundColor : 'orchid'}}></TextField>
-      <TextField required label = "Belongs To" placeholder= "Enter Belongs to" sx={{position: "absolute", bottom: 311, right:300, backgroundColor : 'orchid'}}></TextField>
-      <label style = {{ position : "absolute" ,top: 270, right: 520}}><b>Select Category: </b></label>
+    <Appbar />
+
+
+    <center><BackG in={showSellerAdd}>
+      <h5 style={{ color: Colors.primary, fontFamily: "cursive", position: "absolute", bottom: 470 }} > Provide the details</h5>
+      <TextField required label="Name" placeholder="Enter Name of Product" sx={{ position: "absolute", bottom: 400, right: 550, backgroundColor: 'orchid' }}></TextField>
+      <TextField required label="Price" placeholder="Enter the Price" sx={{ position: "absolute", bottom: 400, right: 300, backgroundColor: 'orchid' }}></TextField>
+      <TextField required label="Description" placeholder="Enter the Desription" sx={{ position: "absolute", bottom: 311, right: 550, backgroundColor: 'orchid' }}></TextField>
+      <TextField required label="Belongs To" placeholder="Enter Belongs to" sx={{ position: "absolute", bottom: 311, right: 300, backgroundColor: 'orchid' }}></TextField>
+      <label style={{ position: "absolute", top: 270, right: 520 }}><b>Select Category: </b></label>
       <div className="container" >
-    <div className="row">
-      <br></br>
-      <div className="col-md-5" ></div>{/*position of field */}
-       <div className="col-md-3" style={{position : "absolute" ,top: 300, right: 390}}>{/*width of field */}
-        <Select options={ list } />
+        <div className="row">
+          <br></br>
+          <div className="col-md-5" ></div>{/*position of field */}
+          <div className="col-md-3" style={{ position: "absolute", top: 300, right: 390 }}>{/*width of field */}
+            <Select options={list} />
+          </div>
+          <div className="col-md-5"></div>{/*position of field */}
+        </div>
       </div>
-      <div className="col-md-5"></div>{/*position of field */}
-    </div>
-  </div>
 
-  <label style = {{ position : "absolute" ,top: 350, right: 520}}><b>  Upload Image: </b></label>
+      <label style={{ position: "absolute", top: 350, right: 520 }}><b>  Upload Image: </b></label>
 
 
-  <AddAPhoto style = {{ position : "absolute" ,top: 350, right: 490}}/>
+      <AddAPhoto style={{ position: "absolute", top: 350, right: 490 }} />
 
-  <input style = {{ position : "absolute" ,top: 398, right: 570}} type="radio" value="veg" name="isveg" /> 
-  <label style = {{ position : "absolute" ,top: 390, right: 590}}><b>  IsVeg </b></label>
+      <input style={{ position: "absolute", top: 398, right: 570 }} type="radio" value="veg" name="isveg" />
+      <label style={{ position: "absolute", top: 390, right: 590 }}><b>  IsVeg </b></label>
 
-  
-  <input style = {{ position : "absolute" ,top: 398, right: 430}} type="radio" value="isavail" name="isavailable" /> 
-  <label style = {{ position : "absolute" ,top: 390, right: 450}}><b>  IsAvailable </b></label>
-{/* <Button style = {{ color: 'white', backgroundColor : '#590059', position : "absolute" ,top: 427, right: 390}} 
+
+      <input style={{ position: "absolute", top: 398, right: 430 }} type="radio" value="isavail" name="isavailable" />
+      <label style={{ position: "absolute", top: 390, right: 450 }}><b>  IsAvailable </b></label>
+      {/* <Button style = {{ color: 'white', backgroundColor : '#590059', position : "absolute" ,top: 427, right: 390}} 
 onClick = {() => window.open("http://localhost:3000/SellerAdd")} >Proceed...</Button> */}
 
-<Link className="nav-item addbutton" to="/SellerAdd">
-        <Button onClick = {() => setSellerAdd(true)} style = {{ color: 'white', backgroundColor : '#590059', position : "absolute" ,top: 440, right: 480}}  ><center>Proceed...</center></Button>
+      <Link className="nav-item addbutton" to="/selleradd">
+        <Button onClick={() => setSellerAdd(true)} style={{ color: 'white', backgroundColor: '#590059', position: "absolute", top: 440, right: 480 }}  ><center>Proceed...</center></Button>
       </Link>
-        
 
-      </BackG></center>
-      </>
-   
+
+    </BackG></center>
+  </>
+
   );
 }

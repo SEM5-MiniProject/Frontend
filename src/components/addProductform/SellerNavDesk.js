@@ -11,6 +11,9 @@ import {
 
   import { Link } from "react-router-dom";
 import { Logout } from "@mui/icons-material";
+import { Container, Stack, Typography } from '@mui/material'
+import { Box } from '@mui/system'
+import Products from "../products";
 
   
   export default function SellerNavDesk({ matches }) {
@@ -47,7 +50,11 @@ import { Logout } from "@mui/icons-material";
         </nav>
        
       </AppbarContainer>
-  
+
+      <Box display="flex" justifyContent="center" sx={{ p: 4 }}>
+            <Typography variant="h4">Added Products List</Typography>
+      </Box>
+      <Products/>  
   </>
       
     );
