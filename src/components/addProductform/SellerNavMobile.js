@@ -7,10 +7,11 @@ import { useUIContext } from "../../context/ui";
 import { Add, AddAPhoto, ArrowDropUp, ArrowUpward, ArrowUpwardOutlined, ArrowUpwardRounded, ArrowUpwardTwoTone, Edit, Update, UpdateRounded } from "@material-ui/icons";
 
 import { Logout, PushPin } from "@mui/icons-material";
+import SellerProducts from "./S_index";
 
 export default function SellerNavMobile({ matches }) {
   
-  return (
+  return (<>
     <AppbarContainer>
       <IconButton >
         <Logout />
@@ -19,11 +20,13 @@ export default function SellerNavMobile({ matches }) {
         Meal Diaries
       </AppbarHeader>
       <IconButton><Add/></IconButton>
-      <IconButton><Edit/></IconButton>
+     
       <IconButton >
         <ArrowUpward/>
       </IconButton>
      
     </AppbarContainer>
+    <SellerProducts/>
+</>
   );
 }

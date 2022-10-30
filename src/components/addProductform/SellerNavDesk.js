@@ -2,6 +2,7 @@ import {
     ListItemButton,
     ListItemIcon,
     ListItemText,
+    Slide,
   } from "@mui/material";
   import {
     AppbarContainer,
@@ -14,19 +15,20 @@ import { Logout } from "@mui/icons-material";
 import { Container, Stack, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import Products from "../products";
+import SellerProducts from "./S_index";
+import { PromotionsContainer } from "../../styles/promotions";
+import { useState } from "react";
+
 
   
   export default function SellerNavDesk({ matches }) {
-
+    const [show, setShow] = useState(true);
     return (<>
       <AppbarContainer >
         <AppbarHeader variant="h4">Meal Diaries</AppbarHeader>
         <nav className="navbar" >
         <MyList type="row">
-          <ListItemButton>
-            <Link className="nav-item" to="/EditFood"><ListItemText primaryTypographyProps={{fontSize: '18px'}} primary="Edit Food" /></Link>
-            {/* <Button className="nav-item" href="/"><ListItemText primary="Home" /></Button> */}
-          </ListItemButton>
+
           <ListItemButton>
             <Link className="nav-item" to="/AddFood"><ListItemText primaryTypographyProps={{fontSize: '18px'}} primary="Add Food" /></Link>
             {/* <Button href="/Explore"><ListItemText primary="Explore" /></Button> */}
@@ -50,11 +52,9 @@ import Products from "../products";
         </nav>
        
       </AppbarContainer>
-
-      <Box display="flex" justifyContent="center" sx={{ p: 4 }}>
-            <Typography variant="h4">Added Products List</Typography>
-      </Box>
-      <Products/>  
+<PromotionsContainer style ={{padding: "8px 1px 10px 1px"}}><Typography  variant="h5">Added Products List</Typography></PromotionsContainer>
+<br/><br/>
+      <SellerProducts/>  
   </>
       
     );

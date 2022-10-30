@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Form from "./components/addProductform/Form";
 import SellerAdd from "./components/addProductform/SellerAdd";
+import AddForm from "./components/addProductform/S_add_product";
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,8 @@ function App() {
           } />
           <Route path="/Explore" element={<Exploree/>} />
           <Route path="/addproduct" element={<Form/>} />
+          <Route path="/Edit Product" element={<AddForm/>} />
+          <Route path="/AddFood" element={<AddForm/>} />
           <Route path="/selleradd" element={<SellerAdd/>} />
           
           {/* <Route path="/offers" element={} />
